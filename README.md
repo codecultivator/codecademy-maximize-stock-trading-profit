@@ -1,12 +1,10 @@
-# maximize-stock-trading-profit
-
+# MAXIMIZE STOCK TRADING PROFIT
 From Codecademey: 
 
 https://www.codecademy.com/code-challenges/code-challenge-maximize-stock-trading-profit-javascript
 
-#MAXIMIZE STOCK TRADING PROFIT
 
-##Maximize Stock Trading Profit
+## Maximize Stock Trading Profit
 Given the daily values of a stock, create a function called maxProfitDays() that, given a list of integers, will return the index value of the two elements that represent the day on which one should have bought a share and the day on which one should have sold a share based on the max profit.
 
 A list of integers will represent the stock price at the beginning or “opening bell” of each day for a week. You are required to buy and sell only once. You also must buy a stock before selling it.
