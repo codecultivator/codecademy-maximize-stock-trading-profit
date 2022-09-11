@@ -10,12 +10,22 @@ For example, given the list [17, 11, 60, 25, 150, 75, 31, 120], you can assume t
 */
 
 function maxProfitDays(stockPrices) {
-    /*console.log('maxProfitDays called');
-    return [1,4]; */
-   for (i = 0; i < stockPrices.length; i++) {
-     for (let i = 0; i < stockPrices.length; i++)
-   }
+  let minPrice = undefined;
+  let maxPrice = undefined;
 
+  for (let stockPrice of stockPrices) {
+    if(!minPrice || stockPrice < minPrice) {
+      minPrice = stockPrice;
+    }
+    if(!maxPrice || stockPrice > maxPrice) {
+      maxPrice = stockPrice;
+    }
+  }
+
+  return [
+    stockPrices.indexOf(minPrice), 
+    stockPrices.indexOf(maxPrice)
+  ];
 } 
 
 // Leave this so we can test your code:
