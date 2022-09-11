@@ -9,7 +9,7 @@ For example, given the list [17, 11, 60, 25, 150, 75, 31, 120], you can assume t
 ---------------------------------------------------------------------
 */
 
-function maxProfitDays(stockPrices) {
+function maxProfitDaysLoop(stockPrices) {
   let minPrice = undefined;
   let maxPrice = undefined;
 
@@ -28,8 +28,15 @@ function maxProfitDays(stockPrices) {
   ];
 } 
 
-// Leave this so we can test your code:
-module.exports = maxProfitDays;
+function maxProfitDaysReduce(stockPrices) {
+  let minPrice = stockPrices.reduce((prevVal, currVal) => prevVal < currVal ? prevVal : currVal);
+  let maxPrice = stockPrices.reduce((prevVal, currVal) => prevVal > currVal ? prevVal : currVal);
 
-var result = maxProfitDays([17, 11, 60, 25, 150, 75, 31, 120]); //function should return [1, 4].
+  return [
+    stockPrices.indexOf(minPrice), 
+    stockPrices.indexOf(maxPrice)
+  ];
+} 
+
+var result = maxProfitDaysReduce([17, 11, 60, 25, 150, 75, 31, 120]); //function should return [1, 4].
 console.log(result);
